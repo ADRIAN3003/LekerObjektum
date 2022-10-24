@@ -36,7 +36,7 @@ namespace LekerObjektum
 
             foreach (var vevo in vevok.OrderBy(x => x.Key))
             {
-                Console.WriteLine(vevo.Key + $" ({vevo.Count()} db):");
+                Console.WriteLine(vevo.Key + $" megye ({vevo.Count()} db vevő):");
                 foreach (var item in vevo.OrderBy(x => x.nev))
                 {
                     Console.WriteLine("\t" + item.nev);
