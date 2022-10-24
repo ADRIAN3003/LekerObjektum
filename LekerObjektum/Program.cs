@@ -34,10 +34,10 @@ namespace LekerObjektum
             var vevok = from vevo in vevos
                         group vevo by vevo.megye;
 
-            foreach (var vevo in vevok)
+            foreach (var vevo in vevok.OrderBy(x => x.Key))
             {
                 Console.WriteLine(vevo.Key + $" ({vevo.Count()} db):");
-                foreach (var item in vevo)
+                foreach (var item in vevo.OrderBy(x => x.nev))
                 {
                     Console.WriteLine("\t" + item.nev);
                 }
